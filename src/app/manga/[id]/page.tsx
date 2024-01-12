@@ -17,7 +17,7 @@ function HeroManga({ manga }) {
         {manga.title}
       </h1>
       <h1 className="text-sm sm:text-lg font-bold text-third dark:text-dark-third text-center px-2 pb-2">
-        {manga.genres.map((genre: any) => genre.name).join(", ")}
+        {manga.genres?.map((genre: any) => genre.name).join(", ")}
       </h1>
     </div>
   );
@@ -30,13 +30,13 @@ function StatManga({ manga }) {
         {manga.authors && manga.authors.length !== 0 && (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">AUTHOR</p>
-            <p>{manga.authors.map((author: any) => author.name).join(", ")}</p>
+            <p>{manga.authors?.map((author: any) => author.name).join(", ")}</p>
           </div>
         )}
         {manga.themes && manga.themes.length !== 0 && (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">THEME</p>
-            <p>{manga.themes.map((theme: any) => theme.name).join(", ")}</p>
+            <p>{manga.themes?.map((theme: any) => theme.name).join(", ")}</p>
           </div>
         )}
         {manga.volumes && (
