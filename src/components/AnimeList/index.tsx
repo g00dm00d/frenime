@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function MangaList({ api }) {
+export default function AnimeList({ api }) {
   return (
     <>
       <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-4">
-        {api.map((anime) => (
+        {api.map((anime: any) => (
           <Link
-            href={`/manga/${anime.mal_id}`}
+            href={`/anime/${anime.mal_id}`}
             key={anime.mal_id}
             className="bg-secondary dark:bg-dark-secondary shadow-slate-600 shadow-lg cursor-pointer"
           >

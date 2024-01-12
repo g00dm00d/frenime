@@ -18,7 +18,7 @@ function HeroAnime({ anime }) {
         {anime.title}
       </h1>
       <h1 className="text-sm sm:text-lg font-bold text-third dark:text-dark-third text-center px-2 pb-2">
-        {anime.genres.map((genre) => genre.name).join(", ")}
+        {anime.genres.map((genre: any) => genre.name).join(", ")}
       </h1>
     </div>
   );
@@ -31,13 +31,13 @@ function StatAnime({ anime }) {
         {anime.studios && anime.studios.length !== 0 && (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">STUDIO</p>
-            <p>{anime.studios.map((theme) => theme.name).join(", ")}</p>
+            <p>{anime.studios.map((theme: any) => theme.name).join(", ")}</p>
           </div>
         )}
         {anime.themes && anime.themes.length !== 0 && (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">THEME</p>
-            <p>{anime.themes.map((theme) => theme.name).join(", ")}</p>
+            <p>{anime.themes.map((theme: any) => theme.name).join(", ")}</p>
           </div>
         )}
         {anime.episodes && anime.episodes !== 1 && (

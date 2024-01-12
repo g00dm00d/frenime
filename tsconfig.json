@@ -15,14 +15,17 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "moduleResolution": "node"
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx",
-    "src/components/Utilities/ThemeSwitch.jsx"
+    "src/components/Utilities/ThemeSwitch.jsx",
+    "src/components/AnimeList/index.jsx",
+    "src/libs/api-libs.js"
   ],
   "exclude": ["node_modules"]
 }
