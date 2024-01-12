@@ -11,11 +11,11 @@ export default async function Page({ params }) {
   return (
     <>
       <section className="mt-28 sm:mt-20">
-        <h1 className="text-xl font-bold text-contrast dark:text-white py-2">{`Pencarian anime untuk ${decodedKeyword}`}</h1>
+        <h1 className="text-xl font-bold text-contrast dark:text-white py-2">{`Search Results for Anime "${decodedKeyword}"`}</h1>
         <AnimeList api={searchAnime} />
       </section>
       <section className="mt-5 sm:mt-10">
-        <h1 className="text-xl font-bold text-contrast dark:text-white py-2">{`Pencarian manga untuk ${decodedKeyword}`}</h1>
+        <h1 className="text-xl font-bold text-contrast dark:text-white py-2">{`Search Results for Manga "${decodedKeyword}"`}</h1>
         <MangaList api={searchManga} />
       </section>
     </>
