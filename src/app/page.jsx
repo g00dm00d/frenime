@@ -3,7 +3,7 @@ import AnimeList from "../components/AnimeList";
 import { getNestedAnimeResponse, getAnimeresponse } from "../libs/api-libs";
 import AnimeScrollX from "../components/AnimeScrollX";
 
-const Page = async () => {
+export default async function Page() {
   const topAnime = await getAnimeresponse("top/anime", "limit=6");
   const recomAnime = await getNestedAnimeResponse("recommendations/anime", 7);
   const topManga = await getAnimeresponse("top/manga", "limit=6");
@@ -36,6 +36,4 @@ const Page = async () => {
       </section>
     </>
   );
-};
-
-export default Page;
+}
