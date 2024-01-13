@@ -16,7 +16,7 @@ export default function AnimeList({ api, type }) {
               alt={anime.title}
               width={350}
               height={350}
-              className="w-full max-h-64 md:max-h-80 object-cover hover:scale-105"
+              className="w-full max-h-64 md:max-h-80 object-cover hover:opacity-80"
             />
 
             <h3 className="text-third dark:text-dark-contrast text-center font-semibold p-2">

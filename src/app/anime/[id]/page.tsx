@@ -27,7 +27,7 @@ function HeroAnime({ anime }) {
 function StatAnime({ anime }) {
   return (
     <div className="flex justify-center mx-2">
-      <div className="flex overflow-x-auto gap-2 text-primary dark:text-dark-contrast trast text-center text-xs font-semibold text-nowrap">
+      <div className="flex overflow-x-auto gap-2 text-primary dark:text-dark-contrast trast text-center text-sm text-nowrap">
         {anime.studios && anime.studios.length !== 0 && (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">STUDIO</p>

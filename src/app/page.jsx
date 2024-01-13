@@ -20,7 +20,7 @@ export default async function Page() {
       {/* RECOMMENDATIONS MANGA*/}
       <section className="mb-5">
         <Header title="MANGA RECOMMENDATIONS" />
-        <AnimeScrollX type="anime" api={recomManga} />
+        <AnimeScrollX type="manga" api={recomManga} />
       </section>
 
       {/* TOP ANIME */}
