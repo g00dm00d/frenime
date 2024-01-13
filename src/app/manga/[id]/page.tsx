@@ -27,56 +27,56 @@ function StatManga({ manga }) {
   return (
     <div className="flex justify-center mx-4">
       <div className="flex overflow-x-auto gap-2 text-primary dark:text-dark-contrast text-center text-sm text-nowrap">
-        {manga.authors && manga.authors.length != 0 && (
+        {manga.authors ? (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">AUTHOR</p>
             <p>
               {manga.authors?.map((author: any) => author.name).join(" & ")}
             </p>
           </div>
-        )}
-        {manga.themes && manga.themes.length != 0 && (
+        ) : null}
+        {manga.themes ? (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">THEME</p>
             <p>{manga.themes?.map((theme: any) => theme.name).join(", ")}</p>
           </div>
-        )}
-        {manga.volumes && (
+        ) : null}
+        {manga.volumes ? (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">VOLUME</p>
             <p>{manga.volumes}</p>
           </div>
-        )}
-        {manga.chapters && (
+        ) : null}
+        {manga.chapters ? (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">CHAPTER</p>
             <p>{manga.chapters}</p>
           </div>
-        )}
-        {manga.status && (
+        ) : null}
+        {manga.status ? (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">STATUS</p>
             <p>{manga.status}</p>
           </div>
-        )}
-        {manga.published && (
+        ) : null}
+        {manga.published ? (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">PUBLISHED</p>
             <p>{manga.published.string}</p>
           </div>
-        )}
-        {manga.Serialization && (
+        ) : null}
+        {manga.Serialization ? (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">SERIALIZATION</p>
             <p>{manga.Serialization}</p>
           </div>
-        )}
-        {manga.autor && (
+        ) : null}
+        {manga.autor ? (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">SEASON</p>
             <p>{manga.season}</p>
           </div>
-        )}
+        ) : null}
       </div>
     </div>
   );
