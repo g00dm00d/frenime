@@ -4,9 +4,9 @@ import { getNestedAnimeResponse, getAnimeresponse } from "../libs/api-libs";
 import AnimeScrollX from "../components/AnimeScrollX";
 
 const Page = async () => {
-  const topManga = await getAnimeresponse("top/manga", "limit=6");
   const topAnime = await getAnimeresponse("top/anime", "limit=6");
   const recomAnime = await getNestedAnimeResponse("recommendations/anime", 7);
+  const topManga = await getAnimeresponse("top/manga", "limit=6");
   const recomManga = await getNestedAnimeResponse("recommendations/manga", 7);
 
   return (
