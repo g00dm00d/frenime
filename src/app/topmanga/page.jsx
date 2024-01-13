@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 "use client";
 
-import MangaList from "../../components/MangaList";
 import Header from "../../components/Utilities/Header";
 import Pagination from "../../components/Utilities/Pagination";
 import { useEffect, useState } from "react";
 import { getAnimeresponse } from "../../libs/api-libs";
+import AnimeList from "../../components/AnimeList";
 
 export default function Page() {
   const [page, setPage] = useState(1);
@@ -41,7 +41,7 @@ export default function Page() {
   return (
     <div className="mt-32 sm:mt-20">
       <Header title={`TOP MANGA #${page}`} />
-      <MangaList api={topManga} />
+      <AnimeList api={topManga} type="manga" />
       <Pagination
         page={page}
         lastPage={lastPage}

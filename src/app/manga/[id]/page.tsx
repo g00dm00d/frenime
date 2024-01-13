@@ -30,7 +30,9 @@ function StatManga({ manga }) {
         {manga.authors && manga.authors.length !== 0 && (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">AUTHOR</p>
-            <p>{manga.authors?.map((author: any) => author.name).join(", ")}</p>
+            <p>
+              {manga.authors?.map((author: any) => author.name).join(" & ")}
+            </p>
           </div>
         )}
         {manga.themes && manga.themes.length !== 0 && (

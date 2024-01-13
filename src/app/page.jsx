@@ -1,6 +1,5 @@
 import Header from "../components/AnimeList/Header";
 import AnimeList from "../components/AnimeList";
-import MangaList from "../components/MangaList";
 import { getNestedAnimeResponse, getAnimeresponse } from "../libs/api-libs";
 
 export default async function Page() {
@@ -11,36 +10,37 @@ export default async function Page() {
 
   return (
     <>
-      {/* rekomendasi anime */}
+      {/* RECOMMENDATIONS ANIME */}
       <section className="mb-7 mt-28 sm:mt-20">
         <Header title="RECOMMENDATIONS ANIME" />
-        <AnimeList api={recomAnime} />
+        <AnimeList type="anime" api={recomAnime} />
       </section>
 
-      {/* anime terpopuler */}
+      {/* TOP ANIME */}
       <section className="mb-7">
         <Header
           title="TOP ANIME"
           linkHref="/topanime"
           linkTitle="Lihat semua"
+          type
         />
-        <AnimeList api={topAnime} />
+        <AnimeList type="anime" api={topAnime} />
       </section>
 
-      {/* rekomendasi manga */}
+      {/* RECOMMENDATIONS MANGA*/}
       <section className="mb-7">
         <Header title="RECOMMENDATIONS MANGA" />
-        <MangaList api={recomManga} />
+        <AnimeList type="manga" api={recomManga} />
       </section>
 
-      {/* manga terpopuler */}
+      {/* TOP MANGA */}
       <section className="mb-7">
         <Header
           title="TOP MANGA"
           linkHref="/topmanga"
           linkTitle="Lihat semua"
         />
-        <MangaList api={topManga} />
+        <AnimeList type="manga" api={topManga} />
       </section>
     </>
   );

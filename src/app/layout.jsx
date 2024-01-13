@@ -14,7 +14,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${poppins.className} bg-primary dark:bg-dark-primary`}>
+      <body
+        className={`${poppins.className} bg-primary dark:bg-dark-primary no-scrollbar`}
+      >
         <Providers>
           <Navbar />
           <main className="px-4 md:px-6">{children}</main>

@@ -41,7 +41,7 @@ export default function Page() {
   return (
     <div className="mt-32 sm:mt-20">
       <Header title={`TOP ANIME #${page}`} />
-      <AnimeList api={topAnime} />
+      <AnimeList api={topAnime} type="anime" />
       <Pagination
         page={page}
         lastPage={lastPage}

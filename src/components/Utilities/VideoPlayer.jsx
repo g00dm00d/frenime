@@ -14,7 +14,6 @@ export default function VideoPlayer({ youtubeID }) {
   };
 
   function ScreenShow() {
-    console.log(youtubeID);
     return (
       <>
         <div className={`${isHidden ? "hidden" : "fixed"} bottom-0 right-0`}>
