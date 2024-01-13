@@ -28,19 +28,19 @@ function StatAnime({ anime }) {
   return (
     <div className="flex justify-center mx-2">
       <div className="flex overflow-x-auto gap-2 text-primary dark:text-dark-contrast trast text-center text-sm text-nowrap">
-        {anime.studios && (
+        {anime.studios && anime.studios.length != 0 && (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">STUDIO</p>
             <p>{anime.studios?.map((theme: any) => theme.name).join(", ")}</p>
           </div>
         )}
-        {anime.themes && (
+        {anime.themes && anime.themes.length != 0 && (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">THEME</p>
             <p>{anime.themes?.map((theme: any) => theme.name).join(", ")}</p>
           </div>
         )}
-        {anime.episodes && anime.episodes !== 1 && (
+        {anime.episodes && anime.episodes.length !== 1 && (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">EPISODE</p>
             <p>{anime.episodes}</p>
