@@ -12,11 +12,11 @@ export default function AnimeList({ api, type }) {
             className="bg-secondary dark:bg-dark-secondary shadow-slate-600 shadow-lg cursor-pointer"
           >
             <Image
-              src={anime.images.webp.image_url}
+              src={anime.images.webp.large_image_url}
               alt={anime.title}
               width={350}
               height={350}
-              className="w-full max-h-64 md:max-h-80 object-cover"
+              className="w-full max-h-64 md:max-h-80 object-cover hover:scale-105"
             />
 
             <h3 className="text-third dark:text-dark-contrast text-center font-semibold p-2">

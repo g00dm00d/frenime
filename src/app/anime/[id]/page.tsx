@@ -7,7 +7,7 @@ function HeroAnime({ anime }) {
     <div className="mt-32 sm:mt-24 flex flex-col items-center">
       <div className="w-full flex justify-center">
         <Image
-          src={anime.images.webp.image_url}
+          src={anime.images.webp.large_image_url}
           alt={anime.title}
           width={350}
           height={350}

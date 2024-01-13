@@ -6,7 +6,7 @@ function HeroManga({ manga }) {
     <div className="mt-32 sm:mt-24 flex flex-col items-center">
       <div className="w-full flex justify-center text-center">
         <Image
-          src={manga.images.webp.image_url}
+          src={manga.images.webp.large_image_url}
           alt={manga.title}
           width={350}
           height={350}
