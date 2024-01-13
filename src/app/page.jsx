@@ -25,22 +25,13 @@ export default async function Page() {
 
       {/* TOP ANIME */}
       <section className="mb-5">
-        <Header
-          title="TOP ANIME"
-          linkHref="/topanime"
-          linkTitle="Lihat semua"
-          type
-        />
+        <Header title="TOP ANIME" linkHref="/topanime" type />
         <AnimeList type="anime" api={topAnime} />
       </section>
 
       {/* TOP MANGA */}
       <section className="mb-5">
-        <Header
-          title="TOP MANGA"
-          linkHref="/topmanga"
-          linkTitle="Lihat semua"
-        />
+        <Header title="TOP MANGA" linkHref="/topmanga" />
         <AnimeList type="manga" api={topManga} />
       </section>
     </>
