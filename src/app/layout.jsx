@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${poppins.className} bg-primary dark:bg-dark-primary no-scrollbar`}
+        className={`${poppins.className} no-scrollbar bg-primary dark:bg-dark-primary`}
       >
         <Providers>
           <Navbar />
