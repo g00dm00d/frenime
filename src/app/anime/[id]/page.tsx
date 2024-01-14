@@ -34,7 +34,7 @@ function StatAnime({ anime }) {
             <p>{anime.studios?.map((theme: any) => theme.name).join(", ")}</p>
           </div>
         )}
-        {anime.themes && anime.themes.length !== 0 && (
+        {anime.themes && (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">THEME</p>
             <p>{anime.themes?.map((theme: any) => theme.name).join(", ")}</p>

@@ -35,7 +35,7 @@ function StatManga({ manga }) {
             </p>
           </div>
         )}
-        {manga.themes && manga.themes.length !== 0 && (
+        {manga.themes && (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">THEME</p>
             <p>{manga.themes?.map((theme: any) => theme.name).join(", ")}</p>
