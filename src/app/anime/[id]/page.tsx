@@ -34,13 +34,13 @@ function StatAnime({ anime }) {
             <p>{anime.studios?.map((theme: any) => theme.name).join(", ")}</p>
           </div>
         )}
-        {anime.themes && (
+        {anime.themes && anime.themes.length !== 0 && (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">THEME</p>
             <p>{anime.themes?.map((theme: any) => theme.name).join(", ")}</p>
           </div>
         )}
-        {anime.episodes && (
+        {anime.episodes && anime.episodes !== 1 && (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">EPISODE</p>
             <p>{anime.episodes}</p>
