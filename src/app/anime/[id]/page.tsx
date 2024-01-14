@@ -3,6 +3,8 @@ import VideoPlayer from "../../../components/Utilities/VideoPlayer";
 import Image from "next/image";
 
 function HeroAnime({ anime }) {
+  console.log(anime.themes);
+
   return (
     <div className="mt-32 sm:mt-24 flex flex-col items-center">
       <div className="w-full flex justify-center">
@@ -34,7 +36,7 @@ function StatAnime({ anime }) {
             <p>{anime.studios?.map((theme: any) => theme.name).join(", ")}</p>
           </div>
         )}
-        {anime.themes && (
+        {anime.themes == true && (
           <div className="bg-contrast dark:bg-dark-secondary grid place-content-center p-2 rounded-lg">
             <p className="text-sm font-bold">THEME</p>
             <p>{anime.themes?.map((theme: any) => theme.name).join(", ")}</p>
